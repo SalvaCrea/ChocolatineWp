@@ -1,0 +1,13 @@
+{
+    "name": "salvacrea/wpframework",
+    "description": "Little wp Framework",
+    "authors": [
+        {
+            "name": "Cardona",
+            "email": "hebustha@gmail.com"
+        }
+    ],
+    "require": {
+        "rilwis/meta-box": "^4.13"
+    }
+}
