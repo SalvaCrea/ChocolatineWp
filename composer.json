@@ -1,7 +1,7 @@
 {
     "name": "salvacrea/wpframework",
     "description": "Little wp Framework",
-    "licence": "mit",
+    "license": "MIT",
     "homepage": "https://github.com/SalvaCrea/wp-framework",
     "authors": [
         {
