@@ -1,2 +1,2 @@
 # wp-framework
-Little Framework Wp
+Little Framework Wp.
