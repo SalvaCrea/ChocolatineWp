@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b601f710ba5e950b747cb1184f5fb2f",
+    "content-hash": "5c870b875bcbb75db3d0ce09a38a3741",
     "packages": [
         {
             "name": "rilwis/meta-box",
