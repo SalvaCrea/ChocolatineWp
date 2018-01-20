@@ -1,6 +1,7 @@
 {
     "name": "salvacrea/wpframework",
     "description": "Little wp Framework",
+    "homepage": "https://github.com/SalvaCrea/wp-framework",
     "authors": [
         {
             "name": "Cardona",
@@ -8,6 +9,7 @@
         }
     ],
     "require": {
+        "php": "^7.0",
         "rilwis/meta-box": "^4.13"
     },
     "autoload": {
