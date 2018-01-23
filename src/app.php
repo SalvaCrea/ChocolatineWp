@@ -1,7 +1,7 @@
 <?php
 namespace WpFramework;
 
-class app{
+class App{
     /**
      * The patch Folder
      * @var string
