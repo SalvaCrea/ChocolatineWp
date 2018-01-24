@@ -92,4 +92,31 @@ class PostType{
     public function getModel(){
         return $this->model();
     }
+    /**
+    * Used than the post type is read
+    * @param  object
+    * @return object return the postType
+    */
+     public function viewController($postType)
+     {
+         return $postType;
+     }
+     /**
+     * Used than the post type is edited
+     * @param  object
+     * @return object return the postType
+     */
+     public function editController($postType)
+     {
+         return $postType;
+     }
+     /**
+     * Used than the post type is deleted
+     * @param  object
+     * @return object return the postType
+     */
+     public function removeController($postType)
+     {
+         return $postType;
+     }
 }
