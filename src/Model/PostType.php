@@ -27,8 +27,8 @@ class PostType{
      */
     public function init()
     {
-        add_action( 'init', [$this => 'create'] );
-        add_filter( 'rwmb_meta_boxes', [$this => 'getModel'] );
+        add_action( 'init', [$this , 'create'] );
+        add_filter( 'rwmb_meta_boxes', [$this , 'getModel'] );
     }
     public function create()
     {
@@ -37,21 +37,21 @@ class PostType{
             'singular_name'      => _x( $this->singularName, 'post type singular name' ),
             'menu_name'          => _x( $this->pluralName, 'admin menu' ),
             'name_admin_bar'     => _x( $this->singularName, 'add new on admin bar' ),
-            'add_new'            => _x( 'Add New ' . $this->singularName ),
-            'add_new_item'       => __( 'Add New ' . $this->singularName ),
-            'new_item'           => __( 'New '. $this->singularName ),
-            'edit_item'          => __( 'Edit '. $this->singularName ),
-            'view_item'          => __( 'View '. $this->singularName ),
-            'all_items'          => __( 'All '. $this->pluralName ),
-            'search_items'       => __( 'Search '. $this->pluralName ),
-            'parent_item_colon'  => __( 'Parent ' . $this->pluralName  .':' ),
-            'not_found'          => __( 'No ' . $this->pluralName  . ' found.' ),
-            'not_found_in_trash' => __( 'No ' . $this->pluralName  . ' found in Trash.' )
+            'add_new'            => _x( 'Add New ' . $this->singularName, 'Add New' ),
+            'add_new_item'       => __( 'Add New ' . $this->singularName, 'Add New' ),
+            'new_item'           => __( 'New '. $this->singularName, 'New' ),
+            'edit_item'          => __( 'Edit '. $this->singularName, 'Edit' ),
+            'view_item'          => __( 'View '. $this->singularName, 'View' ),
+            'all_items'          => __( 'All '. $this->pluralName, 'All' ),
+            'search_items'       => __( 'Search '. $this->pluralName, 'Search' ),
+            'parent_item_colon'  => __( 'Parent ' . $this->pluralName  .':', 'Parent' ),
+            'not_found'          => __( 'No ' . $this->pluralName  . ' found.', 'No' ),
+            'not_found_in_trash' => __( 'No ' . $this->pluralName  . ' found in Trash.', 'No' )
         );
 
         $args = array(
             'labels'                  => $labels,
-            'description'             => __( $this->description ),
+            'description'             => __( $this->description, 'description' ),
             'public'                  => true,
             'publicly_queryable'      => true,
             'show_ui'                 => true,
@@ -71,7 +71,7 @@ class PostType{
      * Return an array that generate metabox in the wp-admin
      * @return array model of data
      */
-    private function model()
+    public function model()
     {
         return [
             // EXAMPLE
@@ -89,9 +89,24 @@ class PostType{
      * Getter Model
      * @return array return model
      */
-    public function getModel(){
-        return $this->model();
-    }
+     public function getModel($meta_boxes){
+         $model = $this->model();
+         if (empty($model['post_types'])) {
+             $model['post_types'] = $this->idName;
+         }
+         if (empty($model['context'])) {
+             $model['context'] = 'advanced';
+         }
+         if (empty($model['priority'])) {
+             $model['priority'] = 'default';
+         }
+         if (empty($model['autosave'])) {
+             $model['autosave'] = false;
+         }
+         $meta_boxes []= $model;
+
+         return $meta_boxes;
+     }
     /**
     * Used than the post type is read
     * @param  object
