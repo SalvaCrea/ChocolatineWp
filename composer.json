@@ -1,8 +1,8 @@
 {
-    "name": "salvacrea/wp-framework",
-    "description": "Little wp Framework",
+    "name": "salvacrea/ChocolatineWp",
+    "description": "Module Middleware between Wordpress And Chocolatine.",
     "license": "MIT",
-    "homepage": "https://github.com/SalvaCrea/wp-framework",
+    "homepage": "https://github.com/SalvaCrea/ChocolatineWp",
     "authors": [
         {
             "name": "Cardona",
@@ -22,7 +22,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/SalvaCrea/wp-framework"
+            "url": "https://github.com/SalvaCrea/ChocolatineWp"
         }
     ]
 }
