@@ -1,2 +1,2 @@
-# wp-framework
-Little Framework Wp.
+# ChocolatineWp
+Module Middleware between Wordpress And Chocolatine.
