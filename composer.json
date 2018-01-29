@@ -18,11 +18,5 @@
         "psr-4": {
             "WpFramework\\": "src/"
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/SalvaCrea/ChocolatineWp"
-        }
-    ]
+    }
 }
