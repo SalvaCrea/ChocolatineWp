@@ -1,5 +1,5 @@
 <?php
-namespace WpFramework;
+namespace ChocolatineWp;
 
 class App{
     /**

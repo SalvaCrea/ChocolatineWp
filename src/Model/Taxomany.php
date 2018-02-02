@@ -1,5 +1,5 @@
 <?php
-namespace WpFramework\Model;
+namespace ChocolatineWp\Model;
 
 class Taxomany{
     private function model()

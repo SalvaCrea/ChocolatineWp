@@ -1,5 +1,5 @@
 <?php
-namespace WpFramework;
+namespace ChocolatineWp;
 
 class Controller{
     public function viewController($postType)
