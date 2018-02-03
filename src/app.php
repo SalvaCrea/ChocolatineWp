@@ -1,14 +1,20 @@
 <?php
 namespace ChocolatineWp;
 
-class App{
-    /**
-     * The patch Folder
-     * @var string
-     */
-    public $pathFolder;
+use Chocolatine\Core;
+use Chocolatine\Helper;
 
-    public function __contruct(){
-        $this->pathFolder = get_template_directory();
+class App extends Core
+{
+    public function __construct(){
+        $this->setPathApplication( \get_template_directory() );
+        parent::__construct();
+        $this->init();
+    }
+    public function afterLoadManagers(){
+        Helper::add_configuration(
+            'modules',
+            [MiddleWareWp\Module::class]
+        );
     }
 }
