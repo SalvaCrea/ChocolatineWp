@@ -6,7 +6,8 @@ class Taxomany{
     {
         return [];
     }
-    public function getModel(){
+    public function getModel()
+    {
         return $this->model();
     }
 }

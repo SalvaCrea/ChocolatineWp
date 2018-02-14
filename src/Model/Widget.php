@@ -1,7 +1,7 @@
 <?php
 namespace ChocolatineWp\Model;
 
-class Widget extends WP_Widget {
+class Widget extends \WP_Widget {
     /**
      * Class of widget
      * @var string
@@ -11,7 +11,7 @@ class Widget extends WP_Widget {
      * Description of widget
      * @var string
      */
-    public $desciption = 'description empty...';
+    public $description = 'description empty...';
     /**
      * The unique name
      * @var string
@@ -25,7 +25,8 @@ class Widget extends WP_Widget {
     /**
   	 * Sets up the widgets name etc
   	 */
-  	public function __construct() {
+  	public function __construct()
+    {
     		$widget_ops = array(
     			'classname' => $this->className,
     			'description' => $this->description,
@@ -34,7 +35,8 @@ class Widget extends WP_Widget {
 
         $this->registerWidget();
   	}
-    public function registerWidget() {
+    public function registerWidget()
+    {
         \add_action( 'widgets_init', function(){
             register_widget( __CLASS__ );
         });
@@ -45,8 +47,9 @@ class Widget extends WP_Widget {
   	 * @param array $args
   	 * @param array $instance
   	 */
-  	public function widget( $args, $instance ) {
-  		// outputs the content of the widget
+  	public function widget( $args, $instance )
+    {
+  		  echo 'widget newsletter';
   	}
 
   	/**
@@ -54,7 +57,8 @@ class Widget extends WP_Widget {
   	 *
   	 * @param array $instance The widget options
   	 */
-  	public function form( $instance ) {
+  	public function form( $instance )
+    {
   		// outputs the options form on admin
   	}
 
@@ -66,7 +70,8 @@ class Widget extends WP_Widget {
   	 *
   	 * @return array
   	 */
-  	public function update( $new_instance, $old_instance ) {
+  	public function update( $new_instance, $old_instance )
+    {
   		// processes widget options to be saved
   	}
 }

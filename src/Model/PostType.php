@@ -25,7 +25,7 @@ class PostType{
     /**
      * Init Function
      */
-    public function init()
+    public function __construct()
     {
         add_action( 'init', [$this , 'create'] );
         add_filter( 'rwmb_meta_boxes', [$this , 'getModel'] );
