@@ -28,6 +28,6 @@ class App extends Core
     }
     public function useRouter()
     {
-
+        $router = new Router();
     }
 }
