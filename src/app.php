@@ -24,7 +24,7 @@ class App extends Core
     {
         Helper::add_configuration(
             'modules',
-            [MiddleWareWp\Module::class]
+            [MiddleWareWp\MiddleWareWp::class]
       );
     }
     public function useRouter()

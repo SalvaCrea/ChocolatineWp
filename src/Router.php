@@ -22,7 +22,7 @@ class Router
     }
     public function getRoutes()
     {
-        $this->routes = require Helper::get_path_app() . '/app/Config/routes.php';
+        $this->routes = require Helper::get_path_app() . '/Config/routes.php';
     }
     public function useRoute()
     {
