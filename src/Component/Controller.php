@@ -1,10 +1,10 @@
 <?php
-namespace ChocolatineWp\Model;
+namespace ChocolatineWp\Component;
 
 class Controller
 {
     public function getPost()
     {
-    
+
     }
 }

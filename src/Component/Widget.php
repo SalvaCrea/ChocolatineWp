@@ -1,5 +1,5 @@
 <?php
-namespace ChocolatineWp\Model;
+namespace ChocolatineWp\Component;
 
 class Widget extends \WP_Widget {
     /**
